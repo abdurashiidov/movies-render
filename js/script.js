@@ -137,24 +137,22 @@ list.addEventListener("click",  e => {
             DIV2.textContent = movieData.title
             LIST.append(DIV2)
              
-            let DELETE = document.createElement("button")
-            DELETE.setAttribute("type", "button")
-            DELETE.setAttribute("class", "btn btn-danger btn-sm mt-2")
-            DELETE.textContent = "Remove"
-            DELETE.dataset.type = "delete"
-            DELETE.dataset.movieId = movieData.movieId 
-            LIST.append(DELETE)
+            let del = document.createElement("button")
+            del.setAttribute("type", "button")
+            del.setAttribute("class", "btn btn-danger btn-sm mt-2")
+            del.textContent = "Remove"
+            del.dataset.type = "delete"
+            del.dataset.movieId = movieData.movieId 
+            LIST.append(del)
 
 
             sidebarbookmarked.appendChild(LIST)
 
-            DELETE.addEventListener("click", () =>{
+            del.addEventListener("click", () =>{
                 LIST.remove()
             })
     }
-    
-    // storage.clear()
-
+    storage.clear()
 })
 
 btnlist.addEventListener("click", () => {
