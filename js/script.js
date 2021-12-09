@@ -106,7 +106,6 @@ form.addEventListener("submit", e =>{
         
         moviRender(filterMovie)
     
-    // console.log(movieReating.value);
 })
 
 list.addEventListener("click",  e => {
@@ -114,7 +113,6 @@ list.addEventListener("click",  e => {
 
     if(e.srcElement.dataset.type == "addbookmark"){
         let findMovie = movies.find(movie => movie.imdbId = movieId)
-            // console.log(findMovie);
 
             let movieData = {
                 movieId : findMovie.imdbId,
