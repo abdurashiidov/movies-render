@@ -129,7 +129,6 @@ list.addEventListener("click",  e => {
             
 
             storage.setItem("book", JSON.stringify(bookMarked))
-            // ADD SIDEBAR
             let LIST = document.createElement("li")
             LIST.classList.add("list-group-item")
 
@@ -144,8 +143,6 @@ list.addEventListener("click",  e => {
             del.dataset.type = "delete"
             del.dataset.movieId = movieData.movieId 
             LIST.append(del)
-
-
             sidebarbookmarked.appendChild(LIST)
 
             del.addEventListener("click", () =>{
